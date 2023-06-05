@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+}
+/*isso abaixo div img deixa com que quando diminui o tamanho da tela, os elementos caminhem junto*/
+div img{
+    display: block;
+    width: 100%;
+}
+
+.flex-container{
+    display: flex;
+    max-width: 992px;
+    margin: auto; /*deixa no centro da pagina*/
+    width: 100%;
+    min-width: 320px;
+}
+
+header{
+    background-color: #122A57;
+    height: 100px; /*aumenta a altura do header*/
+    display: flex; /*alinhando o container ao centro*/
+    align-items: center;
+    color: #fff;
+
+}
+
+header .list-items{
+    display: flex;
+    width: 100%; /*nao sei direito o que altera*/
+    max-width: 260px; /*distancia entre os nomes dos itens*/
+    justify-content: space-between; /*faz com que os nomes dos items do meni fiquem separadinhos */ 
+    align-items: center; /*alinha os itens ao centro da altura no header*/
+
+}
+
+.list-items li a{ /*tem que ser li a pra mudar a cor deles */
+    color: #fff;
+}
+
+header .menu{
+    justify-content: space-between; /*leva o menu para o lado direito*/
+}
+
+.apresentacao{
+    height: 100vh; /*quando subi pra 300vh simplesmente ficou tudo mt espaco e pra baixo*/
+    align-items: center;
+    justify-content: space-between; /*sem space between fica mt proxiimo a imagine e o texto, com space between a imagem vai à direita*/
+
+}
+
+.apresentacao .texto-apresentacao{
+    min-height: 200px; /*quando aumentei pra 500px subiu o conjunto de texto "FlexTurismo o melhor servico etc saiba mais" na tela */
+}
+
+.texto-apresentacao h1{
+    color: #122A57;
+    font-size: 48px;
+    margin: 10px; /*com zero o flexturismo e o resto do texto fca mais proximo*/
+}
+
+.btn{
+    background-color: #122A57;
+    color: white;
+    text-align: center;
+    border-radius: 30px; /*coloquei em 100px e visualmente nada se alterou oO*/
+    width: 220px; /*largura*/
+    display: block; /*faz com que o elemento html seja renderizado como bloco. quando a prof adicionou, o botao do saiba mais ficou maior, principalmente mais largo*/
+    text-decoration: none; /*tirou o underline do saiba mais*/
+    height: 50px;
+    line-height: 50px; /*altura do texto dentro do bloco*/
+    margin: 10px; /*se a margin for zero, o botao e o texto 'o melhor serviço' ficam mt prooximos*/
+    margin-bottom: 10px; /*desce o bloco inteiro de conteudo*/
+}
+
+#quem-somos{
+    flex-direction: row-reverse; /*inverte texto e imagem de lugar*/
+    /*height: 100vh; */ /*antes tava com muito espaço entre o bloco de cima e esse q estamos trabalhando, sem o height resolvemos essa situ*/ 
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#quem-somos h2{
+    font-size: 32px;
+    color: #122A57;
+    display: flex;
+    margin-bottom: 20px; /*aumentou distancia entre quem somos e o texto*/
+}
+
+#quem-somos h2::before{ /*fazendo o treco | antes do quem somos*/
+    content: ''; /*tem que ter o content senao nao cria*/
+    height: 50px;
+    width: 5px;
+    margin-right: 5px;
+    background-color: #122A57;
+    position: relative;
+}
+
+#quem-somos p{
+    margin-bottom: 10px; /*separou os dois p's */
+    width: 90%;
+}
+
+#quem-somos img{
+    min-width: 420px;
+}
+
+.container-externo{
+    background-color: #122A57;
+    width: 100%; /*com 50% ele pega tipo metade da tela, com 100% pega a largura toda que queremos usar*/
+}
+
+#servicos{
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#servicos h2{
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.list-servicos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-servicos .item-servico{
+    text-align: center;
+}
+
+.item-servico a{
+    width: 220px;
+    background-color: #fff;
+    border-radius: 30px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 50px;
+    padding: 5px 10px;
+    color: #122A57;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.item-servico p{
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.item-servico img{
+    width: 30%;
+    margin: auto;
+}
+
+#planos{
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+#planos h2{
+    font-size: 32px;
+}
+
+.list-planos{
+    display: flex;
+    align-items: flex-end; /*alinhado por baixo*/
+    justify-content: space-between;
+}
+
+.item-plano{
+    flex: 1;
+    border: 5px solid #122A57;
+    margin-right: 20px;
+    padding: 10px;
+    max-width: 240px;
+}
+
+.item-plano .btn{
+    margin: auto; /*deixou no meio*/
+    margin-bottom: 20px;
+}
+
+.item-plano h3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item-plano h3::after{
+    content: '';
+    background-color: #122A57;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.item-plano ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10PX;
+}
+
+.item-plano ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.item-plano ul li::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #122A57;
+    margin-right: 5px;
+
+}
+
+footer{
+    background-color: #122A57;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer{
+    justify-content: space-between;
+    color: white;
+}
+
+/*mobile*/
+
+@media(max-width: 992px){ /*passando de 992 ele assume um row*/
+    .flex-container{
+        flex-direction: column;
+    }
+    /*modificando a responsividade de algumas divs*/
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao .texto-apresentacao{
+        width: 100%;
+    }
+
+    #quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos img{
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos{
+        flex-direction: column;
+    }
+
+    .item-servico img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .list-planos{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .list-planos .item-plano{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/*modificando a responsividade de algumas divs*/
